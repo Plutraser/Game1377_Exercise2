@@ -41,35 +41,22 @@ public class MonsterBrawl : MonoBehaviour
     }
     void Start()
     {
-        MonsterData Goblin = new MonsterData();
-        Goblin.monsterName = "Goblin";
-        Goblin.attackStats = 8;
-        Goblin.healthStats = 30;
-        Goblin.speedStats = 1;
+        MonsterData[] monsters =
+        {
+           new MonsterData { monsterName = "Goblin", attackStats = 8, healthStats = 30, speedStats = 1},
+           new MonsterData { monsterName = "Orc", attackStats = 20, healthStats = 80, speedStats = 2},
+           new MonsterData { monsterName = "Troll", attackStats = 35, healthStats = 200, speedStats = 3},
+           new MonsterData { monsterName = "Skeleton", attackStats = 12, healthStats = 50, speedStats = 1},
+           new MonsterData { monsterName = "Ogre", attackStats = 50, healthStats = 250, speedStats = 4}
 
-        MonsterData Orc = new MonsterData();
-        Orc.monsterName = "Orc";
-        Orc.attackStats = 20;
-        Orc.healthStats = 80;
-        Orc.speedStats = 2;
+        };
 
-        MonsterData Troll = new MonsterData();
-        Troll.monsterName = "Troll";
-        Troll.attackStats = 35;
-        Troll.healthStats = 200;
-        Troll.speedStats = 3;
+        foreach (MonsterData m in monsters)
+        {
+            Debug.Log(m.monsterName + " | HP:" + m.healthStats + " | ATK:" + m.attackStats + " | SPD:" + m.speedStats);
+        }
 
-        MonsterData Skeleton = new MonsterData();
-        Skeleton.monsterName = "Skeleton";
-        Skeleton.attackStats = 12;
-        Skeleton.healthStats = 50;
-        Skeleton.speedStats = 1;
-
-        MonsterData Ogre = new MonsterData();
-        Ogre.monsterName = "Ogre";
-        Ogre.attackStats = 50;
-        Ogre.healthStats = 250;
-        Ogre.speedStats = 4;
     }
+
 }
 
