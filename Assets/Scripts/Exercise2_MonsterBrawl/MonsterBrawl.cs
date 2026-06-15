@@ -104,7 +104,10 @@ public class MonsterBrawl : MonoBehaviour
             {
 
                 Debug.Log(monsters[secondMonster].monsterName + " attacks for " + monsters[secondMonster].attackStats);
+
                 monsters[firstMonster].healthStats -= monsters[secondMonster].attackStats;
+
+                Debug.Log(monsters[firstMonster].monsterName + " has " + monsters[firstMonster].healthStats + " HP remaining");
             }
 
             if (monsters[firstMonster].healthStats <= 0 && monsters[secondMonster].healthStats <= 0) //Checks if both died
@@ -123,7 +126,7 @@ public class MonsterBrawl : MonoBehaviour
             {
                 monsters[secondMonster].isDead = true;
                 monsters[firstMonster].isWinner = true;
-                DisplayResults(monsters[firstMonster].monsterName, monsters[secondMonster].monsterName, turnCount, monsters[firstMonster].healthStats);
+                DisplayResults(monsters[secondMonster].monsterName, monsters[firstMonster].monsterName, turnCount, monsters[firstMonster].healthStats);
             }
 
 
