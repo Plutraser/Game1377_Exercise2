@@ -31,14 +31,45 @@ using UnityEngine;
 
 public class MonsterBrawl : MonoBehaviour
 {
+    struct MonsterData
+    {
+        public string monsterName;
+        public int attackStats;
+        public int healthStats;
+        public int speedStats; // Speed means each time it attacks each round. EX. A monster with speed 2 attacks on turns 2, 4, 6
+
+    }
     void Start()
     {
-        string[] monsterNames = { "Goblin", "Orc", "Troll", "Skeleton", "Ogre" };
-        int[] attackStats = { 8, 20, 35, 12, 50 };
-        int[] healthStats = { 30, 80, 200, 50, 250 };
-        int[] speedStats = { 1, 2, 3, 1, 4 };
+        MonsterData Goblin = new MonsterData();
+        Goblin.monsterName = "Goblin";
+        Goblin.attackStats = 8;
+        Goblin.healthStats = 30;
+        Goblin.speedStats = 1;
 
-        // YOUR CODE GOES HERE
+        MonsterData Orc = new MonsterData();
+        Orc.monsterName = "Orc";
+        Orc.attackStats = 20;
+        Orc.healthStats = 80;
+        Orc.speedStats = 2;
+
+        MonsterData Troll = new MonsterData();
+        Troll.monsterName = "Troll";
+        Troll.attackStats = 35;
+        Troll.healthStats = 200;
+        Troll.speedStats = 3;
+
+        MonsterData Skeleton = new MonsterData();
+        Skeleton.monsterName = "Skeleton";
+        Skeleton.attackStats = 12;
+        Skeleton.healthStats = 50;
+        Skeleton.speedStats = 1;
+
+        MonsterData Ogre = new MonsterData();
+        Ogre.monsterName = "Ogre";
+        Ogre.attackStats = 50;
+        Ogre.healthStats = 250;
+        Ogre.speedStats = 4;
     }
 }
 
